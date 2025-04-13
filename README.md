@@ -75,7 +75,7 @@ Form ini digunakan untuk membuat jadwal baru dengan berbagai parameter:
 ## 📦 Instalasi & Deploy
 
 ### ⚙️ Cara Build dan Upload
-- Buka project ini di Arduino IDE
+- Buka project ini di platformIO
 - Pilih board NodeMCU 1.0 (ESP-12E Module) atau board ESP8266 lainnya
 - Upload sketch via kabel USB
 - Akses halaman lokal atau konfigurasi WiFi jika SSID tidak ditemukan
