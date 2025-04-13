@@ -1,0 +1,15 @@
+{
+    "name": "EEPROMManager",
+    "version": "1.0.0",
+    "author": "Your Name",
+    "maintainer": "Your Name",
+    "sentence": "Enhanced EEPROM Manager for Arduino with debugging capabilities.",
+    "paragraph": "This library simplifies working with the EEPROM on Arduino devices, offering functions for reading, writing, and erasing EEPROM data, along with debugging features.",
+    "category": "Storage",
+    "url": "https://github.com/muhamad-bekti-wibowo/EEPROMManager.git",
+    "architectures": [
+      "avr",
+      "esp8266",
+      "esp32"
+    ]
+  }

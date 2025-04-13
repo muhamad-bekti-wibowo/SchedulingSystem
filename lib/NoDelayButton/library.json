@@ -1,0 +1,15 @@
+{
+    "name": "NoDelayButton",
+    "version": "1.0.0",
+    "author": "Muhamad Bekti Wibowo",
+    "maintainer": "Muhamad Bekti Wibowo",
+    "sentence": "A non-blocking button scanning library for Arduino.",
+    "paragraph": "This library provides an easy way to scan multiple buttons without using delays. It supports reading button values, scanning for repeat presses, and converting button indices to characters.",
+    "category": "Input",
+    "url": "https://github.com/muhamad-bekti-wibowo/NoDelayButton",
+    "architectures": [
+      "avr",
+      "esp8266",
+      "esp32"
+    ]
+  }

@@ -1,0 +1,21 @@
+{
+    "name": "eeprommananger",
+    "version": "1.0.0",
+    "description": "Enhanced EEPROM Manager for Arduino with debugging capabilities.",
+    "main": "EEPROMManager.cpp",
+    "scripts": {
+      "test": "echo \"No tests specified\" && exit 0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/muhamad-bekti-wibowo/EEPROMManager.git"
+    },
+    "keywords": [
+      "arduino",
+      "eeprom",
+      "library",
+      "debug"
+    ],
+    "author": "Muhamad Bekti Wibowo",
+    "license": "MIT"
+  }

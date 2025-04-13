@@ -1,0 +1,22 @@
+{
+    "name": "nodelaybutton",
+    "version": "1.0.0",
+    "description": "A non-blocking button scanning library for Arduino.",
+    "main": "NoDelayButton.cpp",
+    "scripts": {
+      "test": "echo \"No tests specified\" && exit 0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/muhamad-bekti-wibowo/NoDelayButton.git"
+    },
+    "keywords": [
+      "arduino",
+      "button",
+      "nonblocking",
+      "library",
+      "NoDelayButton"
+    ],
+    "author": "Muhamad Bekti Wibowo",
+    "license": "MIT"
+  }
