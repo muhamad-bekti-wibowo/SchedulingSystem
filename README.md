@@ -1,6 +1,6 @@
 # ⏰ System Scheduler
 
-**System Scheduler** adalah aplikasi berbasis web yang memungkinkan pengguna untuk menjadwalkan aktivitas tertentu secara otomatis berdasarkan tanggal, waktu, dan mode yang ditentukan. Program EPS8266 ini dapat digunakan untuk mengontrol perangkat, mengaktifkan output seperti tone/buzzer, atau sekadar memberikan pengingat terjadwal.
+**System Scheduler** adalah aplikasi berbasis mikrokontroler esp8266 yang memungkinkan pengguna untuk menjadwalkan aktivitas tertentu secara otomatis berdasarkan tanggal, waktu, dan mode yang ditentukan. Program EPS8266 ini dapat digunakan untuk mengontrol perangkat, mengaktifkan output seperti tone/buzzer.
 
 ![System Scheduler Preview](./screenshots/dashboard.png)
 
