@@ -388,8 +388,6 @@ const char MainWebPage[] PROGMEM = R"=====(
                         <option value="1">Daily</option>
                         <option value="2">One Time</option>
                         <option value="3">By Day</option>
-                        <option value="4">By Date</option>
-                        <option value="5">By Time</option>
                     </select>
                 </div>
 
@@ -497,13 +495,13 @@ const char MainWebPage[] PROGMEM = R"=====(
               <span class="toggle-button" id="toggle1" data-status="0" onclick="OpenLinkBackground('OutputOne?Write=true','toggle1')"></span>
             </div>
             <div class="toggle-control">
-              <span class="toggle-button active" id="toggle2" data-status="1" onclick="OpenLinkBackground('OutputTwo?Write=true','toggle2')"></span>
+              <span class="toggle-button " id="toggle2" data-status="1" onclick="OpenLinkBackground('OutputTwo?Write=true','toggle2')"></span>
             </div>
             <div class="toggle-control">
               <span class="toggle-button" id="toggle3" data-status="0" onclick="OpenLinkBackground('OutputThree?Write=true','toggle3')"></span>
             </div>
             <div class="toggle-control">
-              <span class="toggle-button active" id="toggle4" data-status="1" onclick="OpenLinkBackground('OutputFour?Write=true','toggle4')"></span>
+              <span class="toggle-button " id="toggle4" data-status="1" onclick="OpenLinkBackground('OutputFour?Write=true','toggle4')"></span>
             </div>
           </div>
        
@@ -527,7 +525,7 @@ const char MainWebPage[] PROGMEM = R"=====(
         function OpenLinkBackground(link, element) {
             $.get(link, function (data) {
                 console.log(data);
-                if (data == 1) {
+                if (data == 0) {
                     document.getElementById(element).classList.add("active");
                 } else {
                     document.getElementById(element).classList.remove("active");
@@ -723,9 +721,11 @@ const char MainWebPage[] PROGMEM = R"=====(
             }
         }
 
+        // Tambahkan 10 detik ke target time
         function calculateTimeLeft(targetDate) {
             const now = new Date();
-            let timeDifference = targetDate - now;
+            // Tambahkan 10 detik (10000 ms) ke targetDate
+            let timeDifference = targetDate.getTime() + 10000 - now.getTime();
 
             if (timeDifference < 0) return "Passed";
 
@@ -772,6 +772,12 @@ const char MainWebPage[] PROGMEM = R"=====(
         }
 
         function updateScheduleCountdown(data) {
+
+            OpenLinkBackground('OutputOne?Read=true','toggle1');
+            OpenLinkBackground('OutputTwo?Read=true','toggle2');
+            OpenLinkBackground('OutputThree?Read=true','toggle3');
+            OpenLinkBackground('OutputFour?Read=true','toggle4');
+
             if (temporaryScheduleData !== "" && temporaryScheduleData !== undefined) {
                 console.log(temporaryScheduleData);
                 const scheduleEntries = temporaryScheduleData.split("^")[1].split("$");
@@ -863,8 +869,6 @@ const char AddScheduler[] PROGMEM = R"=====(
                         <option value="1">Daily</option>
                         <option value="2">One Time</option>
                         <option value="3">By Day</option>
-                        <option value="4">By Date</option>
-                        <option value="5">By Time</option>
                     </select>
                     <div class="form-title days-section-title" style="display: none;">Days Selection</div>
                     <div style="display: none;" class="days-section">
@@ -923,8 +927,8 @@ const char AddScheduler[] PROGMEM = R"=====(
                         <div style="display: flex; background-color: rgb(255, 255, 255);" class="form-title">
                             <div class="form-title">State</div>
                             <select class="form-select" name="value">
-                                <option value="0">ON</option>
-                                <option value="1">OFF</option>
+                                <option value="0">ON atau 0</option>
+                                <option value="1">OFF atau 1</option>
                             </select>
                         </div>
                     </div>

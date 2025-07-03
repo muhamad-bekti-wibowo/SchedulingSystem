@@ -79,6 +79,10 @@ void setup()
   pinMode(arrPinOut[1], OUTPUT);
   pinMode(arrPinOut[2], OUTPUT);
   pinMode(arrPinOut[3], OUTPUT);
+  digitalWrite(arrPinOut[0], HIGH);
+  digitalWrite(arrPinOut[1], HIGH);
+  digitalWrite(arrPinOut[2], HIGH);
+  digitalWrite(arrPinOut[3], HIGH);
   Serial.println(flashESP.begin());
   Serial.println(flashESP.listDirectory("/"));
   if (flashESP.readFile("/scheduler/total.txt") == "")
@@ -262,8 +266,9 @@ void loop()
             Serial.println("MUSIK");
             break;
           default:
-            digitalWrite(arrPinOut[OutputData[18].toInt()], OutputData[19].toInt());
-            Serial.println("IO");
+            digitalWrite(arrPinOut[OutputData[18].toInt() - 1], OutputData[19].toInt());
+            Serial.println("GPIO " + String(arrPinOut[OutputData[18].toInt() - 1]) + " " + String(OutputData[19].toInt()));
+            Serial.println("Output " + String(OutputData[18].toInt()) + " " + String(OutputData[19].toInt()));
             break;
           }
           state = 0;
